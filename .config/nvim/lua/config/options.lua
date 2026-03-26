@@ -31,7 +31,7 @@ vim.o.undofile = true
 vim.o.linebreak = true
 
 -- Minimum number of lines to keep above and below the cursor
-vim.o.scrolloff = 4
+-- vim.o.scrolloff = 4
 
 -- change the cwd inside of the nvim
 vim.o.autochdir = true

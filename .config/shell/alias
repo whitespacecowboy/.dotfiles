@@ -18,10 +18,11 @@ alias sudo='sudo '
 alias py='python'
 alias o='xdg-open'
 alias y='yazi'
+alias g='git'
 alias hist='history'
 alias man='man '
 alias diff='diff --color'
-
+alias wget='wget --hsts-file="$XDG_STATE_HOME/wget-hsts"'
 alias rename='perl-rename'
 unalias run-help
 alias help='run-help'

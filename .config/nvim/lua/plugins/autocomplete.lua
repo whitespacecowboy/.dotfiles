@@ -18,7 +18,7 @@ return {
 			local cmp_action = require('lsp-zero').cmp_action()
 			cmp.setup({
 				experimental = {
-					ghost_text = true
+					-- ghost_text = true
 				},
 				window = {
 					completion = { -- rounded border; thin-style scrollbar

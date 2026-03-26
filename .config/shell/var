@@ -7,6 +7,7 @@ export GNUPGHOME="$XDG_CACHE_HOME"/gnupg
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export W3M_DIR="$XDG_STATE_HOME"/w3m
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 # History
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
@@ -24,5 +25,5 @@ export SYSTEMD_PAGERSECURE=1
 export PAGER=bat
 
 export FZF_DEFAULT_OPTS='--color=16'
-export BAT_THEME='base16-256'
+# export BAT_THEME='base16-256'
 export KEYTIMEOUT=1
