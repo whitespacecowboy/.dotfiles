@@ -8,12 +8,13 @@ import QtQuick.Layouts
 PanelWindow {
 	id: root
 
-	property color colBg: "#1a1b26"
+	property color colBg: "#111111"
 	property color colFg: "#a9b1d6"
 	property color colMuted: "#444b6a"
-	property color colCyan: "#0de9d7"
-	property color colBlue: "#7aa2f7"
-	property color colYellow: "#e0af68"
+	property color colWorkpace: "#9ece6a"
+	property color colSubmap: "#f7768e"
+	property color colRest: "#00ff7f"
+	property color colClock: "#bb9af7"
 	property string fontFamily: "JetBrainsMono Nerd Font"
 	property int fontSize: 14
 
@@ -27,7 +28,7 @@ PanelWindow {
 	anchors.top: true
 	anchors.left: true
 	anchors.right: true
-	implicitHeight: revealed ? 35 : 2
+	implicitHeight: revealed ? 35 : 0
 	exclusiveZone: revealed ? 35 : 0
 
 	Behavior on implicitHeight {
@@ -154,7 +155,7 @@ PanelWindow {
 				property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
 				property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
 				text: index + 1
-				color: isActive ? root.colCyan : (ws ? root.colBlue : root.colMuted)
+				color: isActive ? root.colWorkpace : (ws ? root.colClock : root.colMuted)
 				font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 				MouseArea {
 					anchors.fill: parent
@@ -167,7 +168,7 @@ PanelWindow {
 
 		Text {
 			text: submap
-			color: root.colCyan
+			color: root.colSubmap
 			font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 		}
 
@@ -175,7 +176,7 @@ PanelWindow {
 
 		Text {
 			text: "Bri: " + brightness + "%"
-			color: root.colCyan
+			color: root.colRest
 			font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 		}
 
@@ -183,7 +184,7 @@ PanelWindow {
 
 		Text {
 			text: "Vol: " + volume + "%"
-			color: root.colCyan
+			color: root.colRest
 			font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 		}
 
@@ -191,7 +192,7 @@ PanelWindow {
 
 		Text {
 			text: "Bat: " + battery + "%"
-			color: (battery <= 20) ? "red" : colCyan
+			color: (battery <= 20) ? "red" : (battery >= 90 ) ? "white" : colRest
 			font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 		}
 
@@ -199,7 +200,7 @@ PanelWindow {
 
 		Text {
 			id: clock
-			color: root.colBlue
+			color: root.colClock
 			font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 			text: Qt.formatDateTime(new Date(), "ddd, MMM dd - HH:mm")
 			Timer {
