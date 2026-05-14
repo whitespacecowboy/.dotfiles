@@ -22,11 +22,53 @@ PanelWindow {
 	property var volume: 0
 	property var submap: ""
 
+	property bool revealed: false
+
 	anchors.top: true
 	anchors.left: true
 	anchors.right: true
-	implicitHeight: 35
+	implicitHeight: revealed ? 35 : 2
+	exclusiveZone: revealed ? 35 : 0
+
+	Behavior on implicitHeight {
+		NumberAnimation { duration: 200; easing.type: Easing.OutCubic }
+	}
+
 	color: root.colBg
+
+	MouseArea {
+		id: mouseArea
+		anchors.fill: parent
+		hoverEnabled: true
+		acceptedButtons: Qt.NoButton
+		onEntered: revealTimer.start()
+		onExited: { revealTimer.stop(); root.revealed = false }
+	}
+
+	Timer {
+		id: revealTimer
+		interval: 180
+		onTriggered: root.revealed = true
+	}
+
+	// Auto-show briefly on workspace or submap change
+	Timer {
+		id: autoRevealTimer
+		interval: 1500
+		onTriggered: { if (!mouseArea.containsMouse) root.revealed = false }
+	}
+
+	function flashReveal() {
+		root.revealed = true
+		autoRevealTimer.restart()
+	}
+
+	onSubmapChanged: flashReveal()
+
+	Connections {
+		target: Hyprland
+		function onFocusedWorkspaceChanged() { root.flashReveal() }
+	}
 
 	Process {
 		id: batProc
@@ -167,6 +209,5 @@ PanelWindow {
 				onTriggered: clock.text = Qt.formatDateTime(new Date(), "ddd, MMM dd - HH:mm")
 			}
 		}
-		// bluetooth | speaker
 	}
 }
