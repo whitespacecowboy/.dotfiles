@@ -32,7 +32,7 @@ PanelWindow {
 	exclusiveZone: revealed ? 35 : 0
 
 	Behavior on implicitHeight {
-		NumberAnimation { duration: 200; easing.type: Easing.OutCubic }
+		NumberAnimation { duration: 100; easing.type: Easing.OutCubic }
 	}
 
 	color: root.colBg
@@ -56,7 +56,7 @@ PanelWindow {
 	Timer {
 		id: autoRevealTimer
 		interval: 1500
-		onTriggered: { if (!mouseArea.containsMouse) root.revealed = false }
+		onTriggered: root.revealed = false
 	}
 
 	function flashReveal() {
@@ -65,6 +65,8 @@ PanelWindow {
 	}
 
 	onSubmapChanged: flashReveal()
+	onBrightnessChanged: flashReveal()
+	onVolumeChanged: flashReveal()
 
 	Connections {
 		target: Hyprland
