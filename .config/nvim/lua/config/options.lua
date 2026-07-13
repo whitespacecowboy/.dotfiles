@@ -2,6 +2,8 @@
 vim.o.number = true
 vim.o.relativenumber = true
 
+vim.o.termguicolors = true
+
 -- Tab size
 vim.o.tabstop = 3
 vim.o.shiftwidth = 3
