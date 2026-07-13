@@ -2,7 +2,6 @@ return {
 	{
 		'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate',  -- Automatically update parsers
-		branch = 'master',
 
 		config = function()
 			require('nvim-treesitter').setup {
