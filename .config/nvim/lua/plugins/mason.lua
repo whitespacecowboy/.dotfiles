@@ -19,6 +19,8 @@ return {
 					"cssls",
 					"emmet_ls",
 					"lua_ls",
+					"vtsls",
+					-- "ts_ls"
 				}
 			})
 		end,
