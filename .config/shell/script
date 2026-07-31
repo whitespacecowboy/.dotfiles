@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+plug() {
+	# timer=$(($(date +%s%N)/1000000))
+	if [ ! -e ~/.config/zsh/plugins/$2 ]; then
+		git clone $1 ~/.config/zsh/plugins/${1:t:s/.git//}
+	fi
+	source ~/.config/zsh/plugins/"$2"
+	# now=$(($(date +%s%N)/1000000))
+	# elapsed=$(($now-$timer))
+	# echo $elapsed":" $2
+}
+
+git_branch() {
+	gitbranch=$(git branch --show-current 2>/dev/null)
+	if [ ! $gitbranch = "" ]; then
+		echo "%F{048}${gitbranch}%f "
+	fi
+}
+
+cd() {
+    if [[ "$1" =~ ^-[0-9]+$ ]]; then
+        local n=${1#-}
+        local pa=""
+        for ((i=0; i<n; i++)); do
+            pa+="../"
+        done
+		  echo "$pa"
+        builtin cd "$pa"
+    else
+        builtin cd "$@"
+    fi
+}

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Clean up
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GNUPGHOME="$XDG_CACHE_HOME"/gnupg
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export W3M_DIR="$XDG_STATE_HOME"/w3m
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+
+# History
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export PYTHON_HISTORY="$XDG_STATE_HOME"/python_history
+export CALCHISTFILE="$XDG_CACHE_HOME"/calc_history
+export PHP_HISTFILE="$XDG_STATE_HOME"/php/history
+export GDBHISTFILE="$XDG_DATA_HOME"/gdb/history
+# export HISTFILE="$XDG_STATE_HOME"/bash/history
+
+# Resource files
+export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
+
+export HELPDIR=/usr/share/zsh/${ZSH_VERSION}/help
+export SYSTEMD_PAGERSECURE=1
+export PAGER=bat
+
+export FZF_DEFAULT_OPTS='--color=16'
+# export BAT_THEME='base16-256'
+export KEYTIMEOUT=1

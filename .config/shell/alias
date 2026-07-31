@@ -1,0 +1,32 @@
+#!/bin/sh
+
+alias ls='ls --color=auto'
+alias ll='ls -lA'
+alias grep='grep --color=auto'
+alias tree='tree -C'
+alias echo='echo -e'
+alias df='dysk'
+
+alias rm='rm -v'
+alias mv='mv -v'
+alias cp='cp -v'
+
+alias v='nvim'
+
+alias f='fzf --bind "enter:become(nvim {})" --preview "bat {} --color=always"'
+alias sudo='sudo '
+alias py='python'
+alias o='xdg-open'
+alias y='yazi'
+alias g='git'
+alias hist='history'
+alias man='man '
+alias diff='diff --color'
+alias wget='wget --hsts-file="$XDG_STATE_HOME/wget-hsts"'
+alias rename='perl-rename'
+unalias run-help
+alias help='run-help'
+
+alias weather="curl wttr.in/"
+
+alias -g CP='| wl-copy'

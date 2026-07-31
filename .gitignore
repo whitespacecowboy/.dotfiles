@@ -1,0 +1,6 @@
+.git
+commit_msg
+.config/zsh/.zcompdump
+.config/zsh/plugins/
+.config/hypr/hyprpaper.conf
+.config/hypr/hyprlock.conf
