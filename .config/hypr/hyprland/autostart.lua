@@ -1,0 +1,6 @@
+hl.on("hyprland.start", function ()
+	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("hypridle")
+	hl.exec_cmd("qs")
+	hl.exec_cmd("batsignal -d -D 'About to shutdown' -c 10 -C 'About to Die' -w 20 -W 'Battery Low' -f 97 -F 'Battery Full' -e")
+end)

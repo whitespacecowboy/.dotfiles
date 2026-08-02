@@ -10,6 +10,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = "/home/Mani/.dotfiles/.config/hypr/*.conf",
+	pattern = "/home/Mani/.dotfiles/.config/hypr/*",
 	command = "!hyprctl reload all"
 })
