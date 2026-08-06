@@ -155,6 +155,8 @@ hl.define_submap("Move", function()
 	hl.bind("K", hl.dsp.window.move({ direction = "up" }))
 	hl.bind("L", hl.dsp.window.move({ direction = "right" }))
 	hl.bind("C", hl.dsp.window.center())
+	-- TODO: add keybind to move all the windows of a workspace
+	--			to another workspace.
 
 	for i = 1, 10, 1 do
 		local workspaceIndex = i % 10
