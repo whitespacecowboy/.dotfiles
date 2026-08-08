@@ -3,7 +3,7 @@
 alias ls='ls --color=auto'
 alias ll='ls -lA'
 alias grep='grep --color=auto'
-alias tree='tree -C'
+alias tree='tree -C --gitignore'
 alias echo='echo -e'
 alias df='dysk'
 

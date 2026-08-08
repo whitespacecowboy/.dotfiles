@@ -17,6 +17,9 @@ vim.o.clipboard = "unnamedplus"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- colorscheme
+vim.cmd.colorscheme("moonfly")
+
 -- split window
 vim.o.splitright = true
 vim.o.splitbelow = true

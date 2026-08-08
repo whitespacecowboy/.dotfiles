@@ -1,5 +1,5 @@
 local mainMod = "MOD1"
-local browser = "firefox"
+local browser = "/home/Mani/.local/bin/zen-bin"
 local fileManager = "yazi"
 local menu = "rofi -show drun"
 local terminal = "ghostty"
