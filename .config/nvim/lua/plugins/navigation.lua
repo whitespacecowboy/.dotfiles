@@ -36,7 +36,7 @@ return {
 					["<leader>h"] = { "actions.select", opts = { horizontal = true } },
 				},
 			})
-			vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+			vim.keymap.set("n", "<leader>o", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 		end
 	}
 }

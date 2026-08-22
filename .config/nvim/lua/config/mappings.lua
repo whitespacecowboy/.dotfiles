@@ -22,6 +22,8 @@ vim.keymap.set('n', '<CR>', 'i<CR><Esc>', { noremap = true, silent = true })
 -- make
 vim.keymap.set('n', '<leader>r', ':w | make <CR>', { noremap = true, silent = true })
 
+vim.keymap.set('n', 'gs', 's', { noremap = true })
+
 -- Searching on browser
 vim.keymap.set('v', 'gs', function()
 	vim.cmd('normal! "vy')
