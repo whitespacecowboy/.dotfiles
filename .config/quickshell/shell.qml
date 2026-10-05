@@ -36,7 +36,7 @@ PanelWindow {
 	}
 
 	color: root.colBg
-
+	// TODO: Switch from polling based to event based
 	MouseArea {
 		id: mouseArea
 		anchors.fill: parent
@@ -176,6 +176,7 @@ PanelWindow {
 
 		Rectangle { width: 1; height: 16; color: root.colMuted }
 
+		// TODO: Replace "Bri: " with battery icon
 		Text {
 			text: "Bri: " + brightness + "%"
 			color: root.colRest
@@ -184,6 +185,7 @@ PanelWindow {
 
 		Rectangle { width: 1; height: 16; color: root.colMuted }
 
+		// TODO: Replace "Vol: " with battery icon
 		Text {
 			text: "Vol: " + volume + "%"
 			color: root.colRest
@@ -192,11 +194,14 @@ PanelWindow {
 
 		Rectangle { width: 1; height: 16; color: root.colMuted }
 
+		// TODO: Replace "Bat: " with battery icon
 		Text {
 			text: "Bat: " + battery + "%"
 			color: (battery <= 20) ? "red" : (battery >= 90 ) ? "white" : colRest
 			font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
 		}
+
+		// TODO: Add icon for wifi and bluetooth
 
 		Rectangle { width: 1; height: 16; color: root.colMuted }
 
