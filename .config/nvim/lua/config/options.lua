@@ -1,3 +1,6 @@
+local tabsize = 3
+local theme = "moonfly"
+
 -- Relative line number
 vim.o.number = true
 vim.o.relativenumber = true
@@ -5,9 +8,9 @@ vim.o.relativenumber = true
 vim.o.termguicolors = true
 
 -- Tab size
-vim.o.tabstop = 3
-vim.o.shiftwidth = 3
-vim.o.softtabstop = 3
+vim.o.tabstop = tabsize
+vim.o.shiftwidth = tabsize
+vim.o.softtabstop = tabsize
 vim.o.smartindent = true
 
 -- Enable clipboard support
@@ -18,7 +21,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- colorscheme
-vim.cmd.colorscheme("moonfly")
+vim.cmd.colorscheme(theme)
 
 -- split window
 vim.o.splitright = true
