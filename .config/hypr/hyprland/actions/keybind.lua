@@ -28,14 +28,13 @@ hl.bind(
 
 hl.bind(
 	mainMod .. " + F",
-	hl.dsp.exec_cmd(terminal .. " -e sh -c " .. fileManager)
+	hl.dsp.exec_cmd(terminal .. " -e zsh -c " .. fileManager)
 )
 
 hl.bind(
 	mainMod .. " + E",
 	hl.dsp.exec_cmd(menu)
 )
-
 
 hl.bind(
 	"Print",
@@ -288,3 +287,12 @@ hl.bind(
 	hl.dsp.window.fullscreen(),
 	{ submap_universal = true }
 )
+
+-- hl.bind(
+-- 	"F11",
+-- 	hl.dsp.window.fullscreen_state({
+-- 		internal = -1,
+-- 		client = 2
+-- 	}),
+-- 	{ submap_universal = true }
+-- )
