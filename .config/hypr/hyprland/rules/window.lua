@@ -22,14 +22,14 @@ hl.window_rule({
 	no_focus = true,
 })
 
-hl.window_rule({
-	name = "fullscreen single window in workspace",
-	match = {
-		workspace = "w[1]",
-	},
-	-- fullscreen = 0
-	border_size = 0
-})
+-- hl.window_rule({
+-- 	name = "fullscreen single window in workspace",
+-- 	match = {
+-- 		workspace = "w[1]",
+-- 	},
+-- 	-- fullscreen = 0
+-- 	border_size = 0
+-- })
 
 hl.window_rule({
 	name = "move-hyprland-run",
