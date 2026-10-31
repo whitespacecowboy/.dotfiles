@@ -31,3 +31,9 @@ cd() {
         builtin cd "$@"
     fi
 }
+
+hman() {
+	local default_application_name=$(xdg-settings get default-web-browser)
+	# man --html=$application 
+	man --html=zen-browser ${@:1:$}
+}
