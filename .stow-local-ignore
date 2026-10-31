@@ -1,5 +1,4 @@
 \.git
 \.gitignore
+etc
 browser
-setup.sh
-commit_msg
