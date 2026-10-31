@@ -38,12 +38,12 @@ hl.bind(
 
 hl.bind(
 	"Print",
-	hl.dsp.exec_cmd("flameshot full -c -p /home/Mani/Media/Pictures/Screenshots/")
+	hl.dsp.exec_cmd("flameshot full -c -p $HOME/Media/Pictures/Screenshots/")
 )
 
 hl.bind(
 	"SHIFT + Print",
-	hl.dsp.exec_cmd("flameshot gui --last-region -c -p /home/Mani/Media/Pictures/Screenshots/")
+	hl.dsp.exec_cmd("flameshot gui --last-region -c -p $HOME/Media/Pictures/Screenshots/")
 )
 
 hl.bind(
