@@ -1,3 +1,4 @@
 .git
 .config/zsh/.zcompdump
 .config/zsh/plugins/
+.config/git/credentials

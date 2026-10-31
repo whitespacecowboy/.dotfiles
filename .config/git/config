@@ -1,0 +1,23 @@
+[user]
+	email = Imberserker@proton.me
+	name = whitespacecowboy
+[init]
+	default = branch
+	defaultBranch = main
+[credential]
+	helper = store
+[core]
+	editor = nvim
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = false
+[merge]
+    tool = nvimdiff
+    conflictstyle = diff3
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
+[alias]
+	lg = log --oneline --graph --all --decorate
+	s = status
+	cat = cat-file -p
