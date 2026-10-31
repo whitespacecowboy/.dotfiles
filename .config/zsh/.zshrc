@@ -1,6 +1,6 @@
 [ -f  "$XDG_CONFIG_HOME/shell/alias" ] && source "$XDG_CONFIG_HOME/shell/alias"
 [ -f  "$XDG_CONFIG_HOME/shell/var" ] &&  source "$XDG_CONFIG_HOME/shell/var"
-[ -f  "$XDG_CONFIG_HOME/shell/script" ] &&  source "$XDG_CONFIG_HOME/shell/script"
+[ -f  "$XDG_CONFIG_HOME/shell/functions" ] &&  source "$XDG_CONFIG_HOME/shell/functions"
 
 HISTSIZE=10000
 SAVEHIST=10000
