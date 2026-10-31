@@ -7,8 +7,6 @@ background-opacity = 0.65
 # font-feature = -calt
 font-family = JetBrainsMono Nerd Font
 
-gtk-titlebar = false
-
 shell-integration-features = no-cursor
 
 cursor-style = block
