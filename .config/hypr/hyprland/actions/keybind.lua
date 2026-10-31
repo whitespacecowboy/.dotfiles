@@ -248,13 +248,13 @@ hl.bind(
 
 hl.bind(
 	"XF86MonBrightnessUp",
-	hl.dsp.exec_cmd("brightnessctl set 10%+"),
+	hl.dsp.exec_cmd("brightnessctl set 5%+"),
 	{ locked = true, repeating = true, submap_universal = true }
 )
 
 hl.bind(
 	"XF86MonBrightnessDown",
-	hl.dsp.exec_raw("  [ $(brightnessctl g) -gt $(( $(brightnessctl m) / 10 )) ] && brightnessctl set 10%-"),
+	hl.dsp.exec_raw("  [ $(brightnessctl g) -gt $(( $(brightnessctl m) / 20 )) ] && brightnessctl set 5%-"),
 	{ locked = true, repeating = true, submap_universal = true }
 )
 
