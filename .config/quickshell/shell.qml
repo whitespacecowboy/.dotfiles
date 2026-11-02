@@ -8,7 +8,7 @@ import QtQuick.Layouts
 PanelWindow {
 	id: root
 
-	property color colBg: "#111111"
+	property color colBg: "#000000"
 	property color colFg: "#a9b1d6"
 	property color colMuted: "#444b6a"
 	property color colWorkpace: "#9ece6a"
@@ -75,7 +75,7 @@ PanelWindow {
 
 	Process {
 		id: batProc
-		command: ["cat", "/sys/class/power_supply/BAT1/capacity"]
+		command: ["cat", "/sys/class/power_supply/BAT0/capacity"]
 		stdout: StdioCollector {
 			onStreamFinished: battery = this.text
 		}
@@ -101,7 +101,7 @@ PanelWindow {
 		id: briProc
 		command: ["brightnessctl", "g"]
 		stdout: StdioCollector {
-			onStreamFinished: brightness = parseInt(this.text) / 120000 * 100
+			onStreamFinished: brightness = parseInt(this.text) / 300 * 100
 		}
 		Component.onCompleted: running = true
 	}
