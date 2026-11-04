@@ -4,6 +4,7 @@ local fileManager = "yazi"
 local calculator = "numbat"
 local menu = "rofi -show drun"
 local terminal = "ghostty"
+local SCRIPT_PATH="$HOME/.config/shell/scripts/"
 
 
 hl.bind(
@@ -261,7 +262,7 @@ hl.bind(
 
 hl.bind(
 	"XF86MonBrightnessDown",
-	hl.dsp.exec_raw("  [ $(brightnessctl g) -gt $(( $(brightnessctl m) / 20 )) ] && brightnessctl set 5%-"),
+	hl.dsp.exec_cmd(SCRIPT_PATH .. "decrease-brightness.sh"),
 	{ locked = true, repeating = true, submap_universal = true }
 )
 
