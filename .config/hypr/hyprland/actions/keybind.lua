@@ -222,11 +222,90 @@ hl.bind(
 	{ submap_universal = true}
 )
 
-hl.define_submap("Utility", "reset", function ()
-	hl.bind("R", hl.dsp.exec_cmd("pkill hyprpaper && hyprpaper"))
-	hl.bind("B", hl.dsp.exec_cmd("$HOME/.config/shell/scripts/bluetooth.sh"))
-	hl.bind("catchall", hl.dsp.submap("Utility"))
+hl.define_submap("utility", "reset", function ()
+	hl.bind("W", hl.dsp.exec_cmd("pkill hyprpaper && hyprpaper"))
+	hl.bind("R", hl.dsp.exec_cmd(SCRIPT_PATH .. "bluetooth.sh"))
+
+	hl.bind(
+		"P",
+		hl.dsp.exec_cmd("flameshot full -c -p $HOME/Media/Pictures/Screenshots/")
+	)
+
+	hl.bind(
+		"S",
+		hl.dsp.exec_cmd("flameshot gui --last-region -c -p $HOME/Media/Pictures/Screenshots/")
+	)
+
+	hl.bind("A", hl.dsp.submap("audio"))
+	hl.bind("B", hl.dsp.submap("brightness"))
 	hl.bind("I", hl.dsp.submap("reset"))
+end)
+
+
+hl.define_submap("audio", function()
+	hl.bind(
+		"N",
+		hl.dsp.exec_cmd("playerctl next"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"P",
+		hl.dsp.exec_cmd("playerctl previous"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"T",
+		hl.dsp.exec_cmd("playerctl play-pause"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"J",
+		hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"K",
+		hl.dsp.exec_cmd("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"M",
+		hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"SHIFT + M",
+		hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+		{ repeating = true }
+	)
+
+	hl.bind("catchall", hl.dsp.submap("audio"))
+	hl.bind("I", hl.dsp.submap("reset"))
+end)
+
+hl.define_submap("brightness", function ()
+
+	hl.bind(
+		"J",
+		hl.dsp.exec_cmd(SCRIPT_PATH .. "decrease-brightness.sh"),
+		{ repeating = true }
+	)
+
+	hl.bind(
+		"K",
+		hl.dsp.exec_cmd("brightnessctl set 5%+"),
+		{ repeating = true }
+	)
+
+	hl.bind("catchall", hl.dsp.submap("brightness"))
+	hl.bind("I", hl.dsp.submap("reset"))
+
 end)
 
 hl.bind(
