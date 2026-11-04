@@ -1,6 +1,7 @@
 local mainMod = "MOD1"
 local browser = "zen-browser"
 local fileManager = "yazi"
+local calculator = "numbat"
 local menu = "rofi -show drun"
 local terminal = "ghostty"
 
@@ -284,16 +285,22 @@ hl.bind(
 )
 
 hl.bind(
+	"XF86Calculator",
+	hl.dsp.exec_cmd(terminal .. " -e sh -c " .. calculator),
+	{ locked = true, submap_universal = true }
+)
+
+hl.bind(
 	"F11",
 	hl.dsp.window.fullscreen(),
 	{ submap_universal = true }
 )
 
 -- hl.bind(
--- 	"F11",
--- 	hl.dsp.window.fullscreen_state({
--- 		internal = -1,
--- 		client = 2
--- 	}),
--- 	{ submap_universal = true }
--- )
+	-- 	"F11",
+	-- 	hl.dsp.window.fullscreen_state({
+		-- 		internal = -1,
+		-- 		client = 2
+		-- 	}),
+		-- 	{ submap_universal = true }
+		-- )
