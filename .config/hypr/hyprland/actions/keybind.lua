@@ -151,11 +151,11 @@ hl.bind(
 
 hl.bind(
 	mainMod .. " + M",
-	hl.dsp.submap("Move"),
+	hl.dsp.submap("move"),
 	{ submap_universal = true }
 )
 
-hl.define_submap("Move", function()
+hl.define_submap("move", function()
 	hl.bind("H", hl.dsp.window.move({ direction = "left" }))
 	hl.bind("J", hl.dsp.window.move({ direction = "down" }))
 	hl.bind("K", hl.dsp.window.move({ direction = "up" }))
@@ -175,18 +175,17 @@ hl.define_submap("Move", function()
 	hl.bind("T", hl.dsp.window.move({ workspace = "special:magic" }))
 	hl.bind("SHIFT + T", hl.dsp.window.move({ workspace = "special:magic", follow = false }))
 
-	hl.bind("catchall", hl.dsp.submap("Move"))
+	hl.bind("catchall", hl.dsp.submap("move"))
 	hl.bind("I", hl.dsp.submap("reset"))
 end)
 
-
 hl.bind(
 	mainMod .. " + R",
-	hl.dsp.submap("Resize"),
+	hl.dsp.submap("resize"),
 	{ submap_universal = true }
 )
 
-hl.define_submap("Resize", function()
+hl.define_submap("resize", function()
 	hl.bind(
 		"H",
 		hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
@@ -212,13 +211,13 @@ hl.define_submap("Resize", function()
 	)
 
 
-	hl.bind("catchall", hl.dsp.submap("Resize"))
+	hl.bind("catchall", hl.dsp.submap("resize"))
 	hl.bind("I", hl.dsp.submap("reset"))
 end)
 
 hl.bind(
 	mainMod .. " + U",
-	hl.dsp.submap("Utility"),
+	hl.dsp.submap("utility"),
 	{ submap_universal = true}
 )
 
