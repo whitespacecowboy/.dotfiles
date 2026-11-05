@@ -30,5 +30,3 @@ export KEYTIMEOUT=1
 
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
-
-export DATABASE_URL=mariadb://mani:password@%2Frun%2Fmysqld%2Fmysqld.sock/watchlist
