@@ -1,9 +1,13 @@
 #!/usr/bin/env sh
 
-current_brightness=$(brightnessctl g)
-max_brightness=$(brightnessctl m)
+cur_bri=$(brightnessctl g)
+max_bri=$(brightnessctl m)
 
-if [ $current_brightness -gt $(( max_brightness / 20 )) ]; then
+if [ $cur_bri -gt $(( max_bri / 20 )) ]; then
 	brightnessctl set 5%-
 fi
-# [ $(brightnessctl g) -gt $(( $(brightnessctl m) / 20 )) ] && brightnessctl set 5%-
+
+cur_bri=$(brightnessctl g)
+
+bri_perc=$((cur_bri * 100 / max_bri ))
+notify-send -h int:value:$bri_perc "brightness" -t 2000

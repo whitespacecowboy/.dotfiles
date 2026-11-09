@@ -263,13 +263,13 @@ hl.define_submap("audio", function()
 
 	hl.bind(
 		"J",
-		hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+		hl.dsp.exec_cmd(SCRIPT_PATH .. "decrease-volume.sh"),
 		{ repeating = true }
 	)
 
 	hl.bind(
 		"K",
-		hl.dsp.exec_cmd("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"),
+		hl.dsp.exec_cmd(SCRIPT_PATH .. "increase-volume.sh"),
 		{ repeating = true }
 	)
 
@@ -299,7 +299,7 @@ hl.define_submap("brightness", function ()
 
 	hl.bind(
 		"K",
-		hl.dsp.exec_cmd("brightnessctl set 5%+"),
+		hl.dsp.exec_cmd(SCRIPT_PATH .. "increase-brightness.sh"),
 		{ repeating = true }
 	)
 
@@ -310,13 +310,13 @@ end)
 
 hl.bind(
 	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"),
+	hl.dsp.exec_cmd(SCRIPT_PATH .. "increase-volume.sh"),
 	{ locked = true, repeating = true, submap_universal = true }
 )
 
 hl.bind(
 	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+	hl.dsp.exec_cmd(SCRIPT_PATH .. "decrease-volume.sh"),
 	{ locked = true, repeating = true, submap_universal = true }
 )
 
@@ -335,7 +335,7 @@ hl.bind(
 
 hl.bind(
 	"XF86MonBrightnessUp",
-	hl.dsp.exec_cmd("brightnessctl set 5%+"),
+	hl.dsp.exec_cmd(SCRIPT_PATH .. "increase-brightness.sh"),
 	{ locked = true, repeating = true, submap_universal = true }
 )
 

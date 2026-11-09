@@ -65,8 +65,8 @@ PanelWindow {
 	}
 
 	onSubmapChanged: flashReveal()
-	onBrightnessChanged: flashReveal()
-	onVolumeChanged: flashReveal()
+	// onBrightnessChanged: flashReveal()
+	// onVolumeChanged: flashReveal()
 
 	Connections {
 		target: Hyprland
