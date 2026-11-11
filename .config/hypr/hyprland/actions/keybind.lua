@@ -223,7 +223,6 @@ hl.bind(
 )
 
 hl.define_submap("utility", "reset", function ()
-	hl.bind("W", hl.dsp.exec_cmd("pkill hyprpaper && hyprpaper"))
 	hl.bind("R", hl.dsp.exec_cmd(SCRIPT_PATH .. "bluetooth.sh"))
 
 	hl.bind(
