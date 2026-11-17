@@ -1,5 +1,5 @@
 local mainMod = "MOD1"
-local browser = "zen-browser"
+local browser = "$BROWSER"
 local fileManager = "yazi"
 local calculator = "numbat"
 local menu = "rofi -show drun"

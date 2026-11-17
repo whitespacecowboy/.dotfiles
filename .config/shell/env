@@ -21,7 +21,7 @@ export GDBHISTFILE="$XDG_DATA_HOME"/gdb/history
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
 export HELPDIR=/usr/share/zsh/${ZSH_VERSION}/help
-# export SYSTEMD_PAGERSECURE=1
+export SYSTEMD_PAGERSECURE=1
 export PAGER=bat
 
 export FZF_DEFAULT_OPTS='--color=16'
@@ -29,4 +29,4 @@ export FZF_DEFAULT_OPTS='--color=16'
 export KEYTIMEOUT=1
 
 # PATH
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.config/shell/scripts/"

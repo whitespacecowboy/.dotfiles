@@ -34,8 +34,7 @@ cd() {
 
 hman() {
 	local default_application_name=$(xdg-settings get default-web-browser)
-	# man --html=$application 
-	man --html=zen-browser ${@:1:$}
+	man --html=$BROWSER ${@:1:$}
 }
 
 function y() {

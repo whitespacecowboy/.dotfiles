@@ -1,3 +1,4 @@
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1") 
+hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1")
+hl.env("BROWSER", "zen-browser")
