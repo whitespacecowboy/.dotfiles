@@ -24,9 +24,9 @@ export HELPDIR=/usr/share/zsh/${ZSH_VERSION}/help
 export SYSTEMD_PAGERSECURE=1
 export PAGER=bat
 
-export FZF_DEFAULT_OPTS='--color=16'
-# export BAT_THEME='base16-256'
+export FZF_DEFAULT_OPTS="--color=16 --smart-case -x"
+# export BAT_THEME="base16-256"
 export KEYTIMEOUT=1
 
 # PATH
-export PATH="$PATH:$HOME/.local/bin:$HOME/.config/shell/scripts/"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.config/shell/scripts"
