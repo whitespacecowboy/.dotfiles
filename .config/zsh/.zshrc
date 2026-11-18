@@ -5,7 +5,7 @@
 HISTSIZE=10000
 SAVEHIST=10000
 HISTCONTROL=ignoreboth
-HISTFILE="$XDG_CACHE_HOME/zsh_history"
+HISTFILE="$XDG_STATE_HOME/zsh_history"
 ZLE_REMOVE_SUFFIX_CHARS=""
 
 setopt autocd beep interactive_comments # General
